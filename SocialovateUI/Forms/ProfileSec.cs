@@ -1,34 +1,33 @@
-﻿using System;
+﻿using SocialovateDomainServices.Implementation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SocialovateDomainServices.Implementation;
 
-namespace SocilovateUI.UCs
+namespace SocialovateUI.Forms
 {
-    public partial class UserProfile : UserControl
+    public partial class ProfileSec : Form
     {
-        public UserProfile()
+        public ProfileSec()
         {
             InitializeComponent();
         }
 
-        private void UserProfile_Load(object sender, EventArgs e)
+        private void ProfileSec_Load(object sender, EventArgs e)
         {
             //get User
             var user = LoginHelperService.GetCurrentUser();
 
-            //
-/*            Username.Text = user.Username;
+            // add texts to fields
+            Nameuser.Text = $"{user.User.Name} {user.User.Surname}";
+            Username.Text = user.Username;
             Email.Text = user.User.Email;
             Age.Text = user.User.Age.ToString();
-            Fullname.Text = $"{user.User.Name} {user.User.Surname}";
-            ProfilePicture.Load(user.ImageUrl);*/
         }
     }
 }

@@ -45,6 +45,7 @@
     <Compile Include="LoginDTO.cs" />
     <Compile Include="MessagingUserDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AccountDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

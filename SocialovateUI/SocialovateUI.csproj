@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +52,12 @@
     </Compile>
     <Compile Include="Forms\Authorisation.Designer.cs">
       <DependentUpon>Authorisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProfileSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProfileSec.Designer.cs">
+      <DependentUpon>ProfileSec.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Registration.cs">
       <SubType>Form</SubType>
@@ -69,19 +76,19 @@
     <EmbeddedResource Include="Forms\Authorisation.resx">
       <DependentUpon>Authorisation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProfileSec.resx">
+      <DependentUpon>ProfileSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Socialovate.resx">
       <DependentUpon>Socialovate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,11 +102,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Images\Background.png" />
+    <None Include="Resources\bg1.png" />
+    <None Include="Images\BG.png" />
     <Content Include="Images\close.png" />
     <Content Include="Images\Contacts.png" />
     <Content Include="Images\ezgif.com-gif-maker.png" />
@@ -109,7 +116,22 @@
     <Content Include="Images\Profile.png" />
     <Content Include="Images\Settings.png" />
     <Content Include="Images\Webp.net-resizeimage.png" />
+    <None Include="Resources\BG.png" />
     <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SocialovateDomainDTOs\SocialovateDomainDTOs.csproj">
+      <Project>{C77938D9-94E1-49CB-9B28-752750CD4D37}</Project>
+      <Name>SocialovateDomainDTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocialovateDomainModels\SocialovateDomainModels.csproj">
+      <Project>{B0807EE8-7411-45D2-BEE5-7351E38F0BCF}</Project>
+      <Name>SocialovateDomainModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocialovateDomainServices\SocialovateDomainServices.csproj">
+      <Project>{1DC7499A-75EF-494C-AB97-B5B9C128CF14}</Project>
+      <Name>SocialovateDomainServices</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
