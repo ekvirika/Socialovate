@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SocialovateUI.Forms
 {
-    public partial class ProfileSec : Form
+    public partial class ProfileSection : Form
     {
-        public ProfileSec()
+        public ProfileSection()
         {
             InitializeComponent();
         }
@@ -24,10 +24,12 @@ namespace SocialovateUI.Forms
             var user = LoginHelperService.GetCurrentUser();
 
             // add texts to fields
+            //ProfilePic.Load(user.ImageUrl);
+            ProfilePic.ImageLocation = user.ImageUrl;
             Nameuser.Text = $"{user.User.Name} {user.User.Surname}";
             Username.Text = user.Username;
             Email.Text = user.User.Email;
-            Age.Text = user.User.Age.ToString();
+            Age.Text = $"{user.User.Age.ToString()} Years Old";
         }
     }
 }

@@ -53,11 +53,23 @@
     <Compile Include="Forms\Authorisation.Designer.cs">
       <DependentUpon>Authorisation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ProfileSec.cs">
+    <Compile Include="Forms\ContactsSection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ProfileSec.Designer.cs">
-      <DependentUpon>ProfileSec.cs</DependentUpon>
+    <Compile Include="Forms\ContactsSection.Designer.cs">
+      <DependentUpon>ContactsSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessagingSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessagingSection.Designer.cs">
+      <DependentUpon>MessagingSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProfileSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProfileSection.Designer.cs">
+      <DependentUpon>ProfileSection.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Registration.cs">
       <SubType>Form</SubType>
@@ -76,8 +88,11 @@
     <EmbeddedResource Include="Forms\Authorisation.resx">
       <DependentUpon>Authorisation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ProfileSec.resx">
-      <DependentUpon>ProfileSec.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ContactsSection.resx">
+      <DependentUpon>ContactsSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProfileSection.resx">
+      <DependentUpon>ProfileSection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
@@ -104,13 +119,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Images\Background.png" />
     <None Include="Resources\bg1.png" />
     <None Include="Images\BG.png" />
     <Content Include="Images\close.png" />
     <Content Include="Images\Contacts.png" />
     <Content Include="Images\ezgif.com-gif-maker.png" />
-    <Content Include="Images\illustration-7.png" />
     <Content Include="Images\logout.png" />
     <Content Include="Images\Messages.png" />
     <Content Include="Images\Profile.png" />

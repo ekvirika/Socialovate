@@ -12,13 +12,13 @@ namespace SocialovateDomainServices.Implementation
 {
     public class PasswordRecoveryService : IPasswordRecoveryService
     {
-        public Func<string, IAccount> SerchAccountDel { get; set; }
+        public Func<string, IAccount> SearchAccountDel { get; set; }
 
         public bool SentForgotPasswordToUser(string userName)
         {
             try
             {
-                var account = SerchAccountDel.Invoke(userName);
+                var account = SearchAccountDel.Invoke(userName);
                 var message = new MimeMessage();
                 message.From.Add(new MailboxAddress(account.Username, account.User.Email));
                 message.To.Add(new MailboxAddress(account.Username, account.User.Email));

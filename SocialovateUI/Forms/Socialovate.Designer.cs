@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Socialovate));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SidePanel = new System.Windows.Forms.Panel();
+            this.SettingsSec = new System.Windows.Forms.Button();
+            this.MessagesSec = new System.Windows.Forms.Button();
+            this.ContactsSec = new System.Windows.Forms.Button();
+            this.Profile = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Profile = new System.Windows.Forms.Button();
-            this.SidePanel = new System.Windows.Forms.Panel();
-            this.ContactsSec = new System.Windows.Forms.Button();
-            this.MessagesSec = new System.Windows.Forms.Button();
-            this.SettingsSec = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.MainSection = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -57,6 +57,80 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 651);
             this.panel1.TabIndex = 0;
+            // 
+            // SidePanel
+            // 
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(92)))), ((int)(((byte)(84)))));
+            this.SidePanel.Location = new System.Drawing.Point(0, 136);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(12, 65);
+            this.SidePanel.TabIndex = 1;
+            // 
+            // SettingsSec
+            // 
+            this.SettingsSec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(114)))), ((int)(((byte)(101)))));
+            this.SettingsSec.FlatAppearance.BorderSize = 0;
+            this.SettingsSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingsSec.Font = new System.Drawing.Font("SF Pro Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsSec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SettingsSec.Image = ((System.Drawing.Image)(resources.GetObject("SettingsSec.Image")));
+            this.SettingsSec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SettingsSec.Location = new System.Drawing.Point(18, 390);
+            this.SettingsSec.Name = "SettingsSec";
+            this.SettingsSec.Size = new System.Drawing.Size(205, 65);
+            this.SettingsSec.TabIndex = 1;
+            this.SettingsSec.Text = "Settings";
+            this.SettingsSec.UseVisualStyleBackColor = false;
+            // 
+            // MessagesSec
+            // 
+            this.MessagesSec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(114)))), ((int)(((byte)(101)))));
+            this.MessagesSec.FlatAppearance.BorderSize = 0;
+            this.MessagesSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MessagesSec.Font = new System.Drawing.Font("SF Pro Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MessagesSec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MessagesSec.Image = ((System.Drawing.Image)(resources.GetObject("MessagesSec.Image")));
+            this.MessagesSec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MessagesSec.Location = new System.Drawing.Point(18, 308);
+            this.MessagesSec.Name = "MessagesSec";
+            this.MessagesSec.Size = new System.Drawing.Size(205, 65);
+            this.MessagesSec.TabIndex = 1;
+            this.MessagesSec.Text = "Messages";
+            this.MessagesSec.UseVisualStyleBackColor = false;
+            // 
+            // ContactsSec
+            // 
+            this.ContactsSec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(114)))), ((int)(((byte)(101)))));
+            this.ContactsSec.FlatAppearance.BorderSize = 0;
+            this.ContactsSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ContactsSec.Font = new System.Drawing.Font("SF Pro Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactsSec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ContactsSec.Image = ((System.Drawing.Image)(resources.GetObject("ContactsSec.Image")));
+            this.ContactsSec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ContactsSec.Location = new System.Drawing.Point(18, 222);
+            this.ContactsSec.Name = "ContactsSec";
+            this.ContactsSec.Size = new System.Drawing.Size(205, 65);
+            this.ContactsSec.TabIndex = 1;
+            this.ContactsSec.Text = "Contacts";
+            this.ContactsSec.UseVisualStyleBackColor = false;
+            this.ContactsSec.Click += new System.EventHandler(this.ContactsSec_Click);
+            // 
+            // Profile
+            // 
+            this.Profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(114)))), ((int)(((byte)(101)))));
+            this.Profile.FlatAppearance.BorderSize = 0;
+            this.Profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Profile.Font = new System.Drawing.Font("SF Pro Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Profile.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Profile.Image = ((System.Drawing.Image)(resources.GetObject("Profile.Image")));
+            this.Profile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Profile.Location = new System.Drawing.Point(12, 136);
+            this.Profile.Name = "Profile";
+            this.Profile.Size = new System.Drawing.Size(211, 65);
+            this.Profile.TabIndex = 1;
+            this.Profile.Text = "Profile";
+            this.Profile.UseVisualStyleBackColor = false;
+            this.Profile.Click += new System.EventHandler(this.Profile_Click);
             // 
             // label6
             // 
@@ -81,79 +155,6 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Social";
             // 
-            // Profile
-            // 
-            this.Profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(114)))), ((int)(((byte)(101)))));
-            this.Profile.FlatAppearance.BorderSize = 0;
-            this.Profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Profile.Font = new System.Drawing.Font("SF Pro Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Profile.Image = ((System.Drawing.Image)(resources.GetObject("Profile.Image")));
-            this.Profile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Profile.Location = new System.Drawing.Point(12, 136);
-            this.Profile.Name = "Profile";
-            this.Profile.Size = new System.Drawing.Size(211, 65);
-            this.Profile.TabIndex = 1;
-            this.Profile.Text = "Profile";
-            this.Profile.UseVisualStyleBackColor = false;
-            this.Profile.Click += new System.EventHandler(this.Profile_Click);
-            // 
-            // SidePanel
-            // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(92)))), ((int)(((byte)(84)))));
-            this.SidePanel.Location = new System.Drawing.Point(0, 136);
-            this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(12, 65);
-            this.SidePanel.TabIndex = 1;
-            // 
-            // ContactsSec
-            // 
-            this.ContactsSec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(114)))), ((int)(((byte)(101)))));
-            this.ContactsSec.FlatAppearance.BorderSize = 0;
-            this.ContactsSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ContactsSec.Font = new System.Drawing.Font("SF Pro Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactsSec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ContactsSec.Image = ((System.Drawing.Image)(resources.GetObject("ContactsSec.Image")));
-            this.ContactsSec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ContactsSec.Location = new System.Drawing.Point(18, 222);
-            this.ContactsSec.Name = "ContactsSec";
-            this.ContactsSec.Size = new System.Drawing.Size(205, 65);
-            this.ContactsSec.TabIndex = 1;
-            this.ContactsSec.Text = "Contacts";
-            this.ContactsSec.UseVisualStyleBackColor = false;
-            // 
-            // MessagesSec
-            // 
-            this.MessagesSec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(114)))), ((int)(((byte)(101)))));
-            this.MessagesSec.FlatAppearance.BorderSize = 0;
-            this.MessagesSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MessagesSec.Font = new System.Drawing.Font("SF Pro Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MessagesSec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MessagesSec.Image = ((System.Drawing.Image)(resources.GetObject("MessagesSec.Image")));
-            this.MessagesSec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MessagesSec.Location = new System.Drawing.Point(18, 308);
-            this.MessagesSec.Name = "MessagesSec";
-            this.MessagesSec.Size = new System.Drawing.Size(205, 65);
-            this.MessagesSec.TabIndex = 1;
-            this.MessagesSec.Text = "Messages";
-            this.MessagesSec.UseVisualStyleBackColor = false;
-            // 
-            // SettingsSec
-            // 
-            this.SettingsSec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(114)))), ((int)(((byte)(101)))));
-            this.SettingsSec.FlatAppearance.BorderSize = 0;
-            this.SettingsSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingsSec.Font = new System.Drawing.Font("SF Pro Display", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsSec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SettingsSec.Image = ((System.Drawing.Image)(resources.GetObject("SettingsSec.Image")));
-            this.SettingsSec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SettingsSec.Location = new System.Drawing.Point(18, 390);
-            this.SettingsSec.Name = "SettingsSec";
-            this.SettingsSec.Size = new System.Drawing.Size(205, 65);
-            this.SettingsSec.TabIndex = 1;
-            this.SettingsSec.Text = "Settings";
-            this.SettingsSec.UseVisualStyleBackColor = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -167,9 +168,9 @@
             // 
             // MainSection
             // 
-            this.MainSection.Location = new System.Drawing.Point(249, 60);
+            this.MainSection.Location = new System.Drawing.Point(229, 27);
             this.MainSection.Name = "MainSection";
-            this.MainSection.Size = new System.Drawing.Size(675, 555);
+            this.MainSection.Size = new System.Drawing.Size(709, 624);
             this.MainSection.TabIndex = 10;
             // 
             // Socialovate

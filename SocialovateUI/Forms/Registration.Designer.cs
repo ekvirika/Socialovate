@@ -33,6 +33,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,14 +41,13 @@
             this.label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.RegisterBtn = new System.Windows.Forms.Button();
+            this.ImageUrl = new System.Windows.Forms.TextBox();
             this.UsernameInp = new System.Windows.Forms.TextBox();
             this.PasswordInp = new System.Windows.Forms.TextBox();
             this.AgeInp = new System.Windows.Forms.TextBox();
             this.SurnameInp = new System.Windows.Forms.TextBox();
             this.NameInp = new System.Windows.Forms.TextBox();
             this.EmailInp = new System.Windows.Forms.TextBox();
-            this.ImageUrl = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.ExitBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -112,6 +112,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 561);
             this.panel1.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(14, 352);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Image Url";
             // 
             // label8
             // 
@@ -184,10 +194,18 @@
             this.RegisterBtn.Location = new System.Drawing.Point(48, 488);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(138, 46);
-            this.RegisterBtn.TabIndex = 1;
+            this.RegisterBtn.TabIndex = 7;
             this.RegisterBtn.Text = "Register Now";
             this.RegisterBtn.UseVisualStyleBackColor = false;
             this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
+            // 
+            // ImageUrl
+            // 
+            this.ImageUrl.BackColor = System.Drawing.SystemColors.Window;
+            this.ImageUrl.Location = new System.Drawing.Point(17, 372);
+            this.ImageUrl.Name = "ImageUrl";
+            this.ImageUrl.Size = new System.Drawing.Size(217, 23);
+            this.ImageUrl.TabIndex = 5;
             // 
             // UsernameInp
             // 
@@ -195,7 +213,7 @@
             this.UsernameInp.Location = new System.Drawing.Point(17, 427);
             this.UsernameInp.Name = "UsernameInp";
             this.UsernameInp.Size = new System.Drawing.Size(217, 23);
-            this.UsernameInp.TabIndex = 0;
+            this.UsernameInp.TabIndex = 6;
             // 
             // PasswordInp
             // 
@@ -203,7 +221,7 @@
             this.PasswordInp.Location = new System.Drawing.Point(17, 312);
             this.PasswordInp.Name = "PasswordInp";
             this.PasswordInp.Size = new System.Drawing.Size(217, 23);
-            this.PasswordInp.TabIndex = 0;
+            this.PasswordInp.TabIndex = 4;
             // 
             // AgeInp
             // 
@@ -211,7 +229,7 @@
             this.AgeInp.Location = new System.Drawing.Point(17, 250);
             this.AgeInp.Name = "AgeInp";
             this.AgeInp.Size = new System.Drawing.Size(217, 23);
-            this.AgeInp.TabIndex = 0;
+            this.AgeInp.TabIndex = 3;
             // 
             // SurnameInp
             // 
@@ -219,7 +237,7 @@
             this.SurnameInp.Location = new System.Drawing.Point(17, 192);
             this.SurnameInp.Name = "SurnameInp";
             this.SurnameInp.Size = new System.Drawing.Size(217, 23);
-            this.SurnameInp.TabIndex = 0;
+            this.SurnameInp.TabIndex = 2;
             // 
             // NameInp
             // 
@@ -227,7 +245,7 @@
             this.NameInp.Location = new System.Drawing.Point(17, 132);
             this.NameInp.Name = "NameInp";
             this.NameInp.Size = new System.Drawing.Size(217, 23);
-            this.NameInp.TabIndex = 0;
+            this.NameInp.TabIndex = 1;
             // 
             // EmailInp
             // 
@@ -237,24 +255,6 @@
             this.EmailInp.Name = "EmailInp";
             this.EmailInp.Size = new System.Drawing.Size(217, 23);
             this.EmailInp.TabIndex = 0;
-            // 
-            // ImageUrl
-            // 
-            this.ImageUrl.BackColor = System.Drawing.SystemColors.Window;
-            this.ImageUrl.Location = new System.Drawing.Point(17, 372);
-            this.ImageUrl.Name = "ImageUrl";
-            this.ImageUrl.Size = new System.Drawing.Size(217, 23);
-            this.ImageUrl.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(14, 352);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Image Url";
             // 
             // ExitBtn
             // 

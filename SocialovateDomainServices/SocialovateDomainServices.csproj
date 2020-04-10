@@ -56,6 +56,7 @@
     <Compile Include="Abstraction\IPasswordRecoveryService.cs" />
     <Compile Include="Abstraction\ISocialovateService.cs" />
     <Compile Include="Implementation\AskUserToJoinService.cs" />
+    <Compile Include="Implementation\ContactService.cs" />
     <Compile Include="Implementation\LoginHelperService.cs" />
     <Compile Include="Implementation\PasswordRecoveryService.cs" />
     <Compile Include="Implementation\SocialovateService.cs" />

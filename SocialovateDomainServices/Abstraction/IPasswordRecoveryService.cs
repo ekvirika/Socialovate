@@ -9,7 +9,7 @@ namespace SocialovateDomainServices.Abstraction
 {
     public interface IPasswordRecoveryService
     {
-        Func<string, IAccount> SerchAccountDel { get; set; }
+        Func<string, IAccount> SearchAccountDel { get; set; }
         bool SentForgotPasswordToUser(string userName);
     }
 }

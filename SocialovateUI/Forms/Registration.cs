@@ -29,12 +29,12 @@ namespace SocialovateUI.Forms
             {
                 Username = UsernameInp.Text,
                 Password = PasswordInp.Text,
+                ImageUrl = ImageUrl.Text,
                 User = new User()
                 {
-                    Name = UsernameInp.Text,
+                    Name = NameInp.Text,
                     Surname = SurnameInp.Text,
                     Age = Convert.ToInt32(AgeInp.Text),
-                    Image = ImageUrl.Text,
                     Email = EmailInp.Text
                 }
             });

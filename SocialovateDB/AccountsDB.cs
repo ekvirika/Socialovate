@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using SocialovateDomainModels.Abstraction;
 using SocialovateDomainModels.Implementation;
+using SocialovateExtensionMethods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace SocialovateDB
 {
     public class AccountsDB : TableDB<IAccount>
     {
-        private string _path = "Accounts.json";
+        private readonly string _path = "Accounts.json";
         public FileWorkerService _fileWorker = default;
         private AccountsDB() { 
             _accounts = new List<IAccount>();
@@ -42,8 +43,7 @@ namespace SocialovateDB
 
             _accounts = Read();
             _accounts.Add(account);
-            _fileWorker.WriteInFile(JsonConvert.SerializeObject(_accounts), _path);
-
+            _fileWorker.WriteInFile(_accounts.Stringify<List<IAccount>>(), _path);
         }
 
         public override List<IAccount> Read()
@@ -51,7 +51,8 @@ namespace SocialovateDB
             var accountsFromFile = _fileWorker.ReadFromFile(_path);
             if (accountsFromFile.Length > 0)
             {
-                _accounts = (JsonConvert.DeserializeObject<List<Account>>(accountsFromFile)).ToList<IAccount>();
+                _accounts = accountsFromFile.ParseList<Account>().ToList<IAccount>();
+
             }
             return _accounts;
         }
@@ -67,5 +68,6 @@ namespace SocialovateDB
         {
             _accounts.Remove(account);
         }
+
     }
 }

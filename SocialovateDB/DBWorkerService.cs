@@ -28,12 +28,7 @@ namespace SocialovateDB
         }
 
         public bool Update(T obj)
-        {
-            try
-            {
-                _tableDB.Update(obj);
-                return true;
-            }
+        {pa
             catch (Exception ex) { return false; }
         }
 

@@ -34,11 +34,22 @@ namespace SocialovateUI.Forms
 
         private void Profile_Click(object sender, EventArgs e)
         {
-            ProfileSec profileSection = new ProfileSec();
+            ProfileSection profileSection = new ProfileSection();
             profileSection.TopLevel = false;
             MainSection.Controls.Add(profileSection);
             profileSection.Dock = DockStyle.Fill;
+            profileSection.BringToFront();
             profileSection.Show();
+        }
+
+        private void ContactsSec_Click(object sender, EventArgs e)
+        {
+            ContactsSection contactsSection = new ContactsSection();
+            contactsSection.TopLevel = false;
+            MainSection.Controls.Add(contactsSection);
+            contactsSection.Dock = DockStyle.Fill;
+            contactsSection.BringToFront();
+            contactsSection.Show();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using SocialovateDomainDTOs;
+using SocialovateDomainModels.Implementation;
 using System;
 using System.Collections.Generic;
 using System.Linq;

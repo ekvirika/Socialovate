@@ -134,7 +134,7 @@
             this.RegisterBtn.Location = new System.Drawing.Point(56, 301);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(138, 30);
-            this.RegisterBtn.TabIndex = 1;
+            this.RegisterBtn.TabIndex = 3;
             this.RegisterBtn.Text = "Register Now";
             this.RegisterBtn.UseVisualStyleBackColor = false;
             this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
@@ -148,7 +148,7 @@
             this.SignInBtn.Location = new System.Drawing.Point(56, 187);
             this.SignInBtn.Name = "SignInBtn";
             this.SignInBtn.Size = new System.Drawing.Size(138, 30);
-            this.SignInBtn.TabIndex = 1;
+            this.SignInBtn.TabIndex = 2;
             this.SignInBtn.Text = "Sing in ";
             this.SignInBtn.UseVisualStyleBackColor = false;
             this.SignInBtn.Click += new System.EventHandler(this.SignInBtn_Click);
@@ -159,7 +159,7 @@
             this.Password.Location = new System.Drawing.Point(17, 129);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(217, 27);
-            this.Password.TabIndex = 0;
+            this.Password.TabIndex = 1;
             // 
             // Email
             // 
