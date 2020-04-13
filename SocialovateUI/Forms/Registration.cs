@@ -39,7 +39,7 @@ namespace SocialovateUI.Forms
                 }
             });
 
-            MessageBox.Show($"User {UsernameInp.Text} {SurnameInp.Text} successfully registered!");
+            MessageBox.Show($"User {UsernameInp.Text} {SurnameInp.Text} successfully registered!", "Information", MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             //open new Dialog
             this.Hide();

@@ -35,17 +35,17 @@ namespace SocialovateUI.Forms
                 Password = Password.Text
             });
 
-/*            if (user != null)
-            {*/
-                MessageBox.Show("Success");
+            if (user != null)
+            {
+                MessageBox.Show("Success", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 Socialovate socialovateView = new Socialovate();
-                socialovateView.ShowDialog();
-/*            }
+                socialovateView.Show();
+            }
             else
             {
                 MessageBox.Show("Ooooppsss.. Something went wrong. Try again!");
-            }*/
+            }
         }
 
         private void RegisterBtn_Click(object sender, EventArgs e)

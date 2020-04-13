@@ -59,14 +59,18 @@ namespace SocialovateDB
 
         public override void Update(IAccount account)
         {
+            _accounts = Read();
             var currentElement = _accounts.FirstOrDefault(o => o.AccountId == account.AccountId);
             var elemIndex = _accounts.IndexOf(currentElement);
             _accounts[elemIndex] = account;
+            _fileWorker.WriteInFile(_accounts.Stringify<List<IAccount>>(), _path);
         }
 
         public override void Delete(IAccount account)
         {
+            _accounts = Read();
             _accounts.Remove(account);
+            _fileWorker.WriteInFile(_accounts.Stringify<List<IAccount>>(), _path);
         }
 
     }

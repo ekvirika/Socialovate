@@ -13,7 +13,7 @@ namespace SocialovateDomainServices.Implementation
     {
 
 
-        public Action<IAccount, ContactDTO> AddContactDel { get; set; }        
+        public Func<IAccount, ContactDTO, bool> AddContactDel { get; set; }        
         public Func<IAccount, List<ContactDTO>> GetAllContactsDel { get; set; } //
 
         // Filtration
@@ -26,9 +26,9 @@ namespace SocialovateDomainServices.Implementation
             return GetAllContactsDel.Invoke(acc);
         }
 
-        public void AddUserContact(IAccount acc, ContactDTO contact)
+        public bool AddUserContact(IAccount acc, ContactDTO contact)
         {
-            AddContactDel.Invoke(acc, contact);
+            return AddContactDel.Invoke(acc, contact);
         }
 
         public ContactDTO FilterByUsername(string username)
@@ -36,7 +36,6 @@ namespace SocialovateDomainServices.Implementation
             return FilterContactsByUsernameDel.Invoke(username);
 
         }
-
         public ContactDTO SearchInAllAccounts(string username)
         {
             return SearchInAllAcountsDel.Invoke(username);

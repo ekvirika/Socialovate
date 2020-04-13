@@ -28,7 +28,7 @@ namespace SocialovateDomainServices.Implementation
                 using (SmtpClient client = new SmtpClient())
                 {
                     client.Connect("smtp.gmail.com", 587, false);
-                    client.Authenticate("ekvirika8@gmail.com", "@");
+                    client.Authenticate("smtpacc123456@gmail.com", "@smtpsmtp123456");
                     client.Send(message);
                     client.Disconnect(true);
                 }

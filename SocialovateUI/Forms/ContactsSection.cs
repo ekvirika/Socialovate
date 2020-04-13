@@ -87,7 +87,14 @@ namespace SocialovateUI.Forms
 
         private void AddUser_Click(object sender, EventArgs e)
         {
-            _contactService.AddUserContact(_currentUser, DataGrid.Rows.Cast<ContactDTO>().First());
+            try
+            {
+                _contactService.AddUserContact(_currentUser, _contactService.SearchInAllAccounts(Search.Text));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

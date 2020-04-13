@@ -12,12 +12,9 @@ namespace SocialovateDomainModels.Implementation
     public class Account : IAccount
     {
         private static int _id = 0;
-        public Account() { AccountId = _id; _id++; }
-
-
-
-        public string Password { get; set; }
-        public int AccountId { get; set; }
+        public Account() { 
+            AccountId = _id; _id++; 
+        }
 
         [JsonConverter(typeof(ConcreteConverter<User>))]
         public IUser User { get; set; }
@@ -25,6 +22,8 @@ namespace SocialovateDomainModels.Implementation
         public List<ContactDTO> Contacts { get; set; } = new List<ContactDTO>(){};
         public List<IMessage> Messages { get; set; } = new List<IMessage>();
         public string Username { get; set; }
+        public string Password { get; set; }
+        public int AccountId { get; }
     }
 
 

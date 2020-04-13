@@ -34,6 +34,8 @@ namespace SocialovateDomainServices.Implementation
                 return _instance;
             }
         }
+
+        public object MessageBox { get; private set; }
         #endregion
 
         #region User Services
@@ -61,7 +63,7 @@ namespace SocialovateDomainServices.Implementation
         {
             var user = _accountsDB
                            .Read()
-                           .FirstOrDefault(o => o.Username == userName);
+                           .FirstOrDefault(o => o.Username.ToLower() == userName.ToLower());
             return user;
         }
 
@@ -91,13 +93,23 @@ namespace SocialovateDomainServices.Implementation
             var contact = LoginHelperService
                 .GetCurrentUser()
                 .Contacts
-                .FirstOrDefault(o => o.Username == username);
+                .FirstOrDefault(o => o.Username.ToLower() == username.ToLower());
             return contact;
         }
 
-        public void AddUserContact(IAccount account, ContactDTO contact)
+        public bool AddUserContact(IAccount account, ContactDTO contact)
         {
-            account.Contacts.Add(SearchForContactInDB(contact.Username));
+            var searchedContact = SearchForContactInDB(contact.Username);
+            if(account.Contacts.Exists(o => o.Username.ToLower() == searchedContact.Username.ToLower()) == false)
+            {
+                account.Contacts.Add(SearchForContactInDB(contact.Username));
+                _accountsDB.Update(account);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public List<ContactDTO> GetAllUserContacts(IAccount acc)

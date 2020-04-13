@@ -28,8 +28,16 @@ namespace SocialovateDB
         }
 
         public bool Update(T obj)
-        {pa
-            catch (Exception ex) { return false; }
+        {
+            try
+            {
+                _tableDB.Update(obj);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         public bool Delete(T obj)

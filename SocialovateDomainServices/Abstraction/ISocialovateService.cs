@@ -20,7 +20,7 @@ namespace SocialovateDomainServices.Abstraction
         // Contact
         ContactDTO SearchForContactInDB(string username);
         ContactDTO SearchUserContactByUsername(string username);
-        void AddUserContact(IAccount account, ContactDTO contact);
+        bool AddUserContact(IAccount account, ContactDTO contact);
         List<ContactDTO> GetAllUserContacts(IAccount acc);
         //void RegisterNewContact();
     }

@@ -12,7 +12,7 @@ namespace SocialovateDomainModels.Abstraction
     {
         string Password { get; set; }
         string Username { get; set; }
-        int AccountId { get; set; }
+        int AccountId { get; }
         IUser User { get; set; }
         string ImageUrl { get; set; }
         List<ContactDTO> Contacts { get; set; }

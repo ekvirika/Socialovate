@@ -27,15 +27,17 @@ namespace SocialovateUI.Forms
             SidePanel.Height = this.Height;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void PictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void Profile_Click(object sender, EventArgs e)
         {
-            ProfileSection profileSection = new ProfileSection();
-            profileSection.TopLevel = false;
+            ProfileSection profileSection = new ProfileSection
+            {
+                TopLevel = false
+            };
             MainSection.Controls.Add(profileSection);
             profileSection.Dock = DockStyle.Fill;
             profileSection.BringToFront();
@@ -44,12 +46,26 @@ namespace SocialovateUI.Forms
 
         private void ContactsSec_Click(object sender, EventArgs e)
         {
-            ContactsSection contactsSection = new ContactsSection();
-            contactsSection.TopLevel = false;
+            ContactsSection contactsSection = new ContactsSection
+            {
+                TopLevel = false
+            };
             MainSection.Controls.Add(contactsSection);
             contactsSection.Dock = DockStyle.Fill;
             contactsSection.BringToFront();
             contactsSection.Show();
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            LoginHelperService.LogOutUser();
+            var result = MessageBox.Show("Do you want to log out?", "Logging out", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Authorisation auth = new Authorisation();
+                this.Hide();
+                auth.Show();
+            }
         }
     }
 }

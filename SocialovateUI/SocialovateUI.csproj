@@ -91,6 +91,9 @@
     <EmbeddedResource Include="Forms\ContactsSection.resx">
       <DependentUpon>ContactsSection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessagingSection.resx">
+      <DependentUpon>MessagingSection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProfileSection.resx">
       <DependentUpon>ProfileSection.cs</DependentUpon>
     </EmbeddedResource>
